@@ -152,7 +152,7 @@ const EditButton: React.FC<IEmployeeProps> = (props: IEmployeeProps) => {
                                     setSelectedGroup(selected || null);
                                 }} name="group" placeholder="Group" className="w-[400px] h-12 overflow-hidden rounded-lg bg-neutral-100 text-lg p-4">
                                     <option value="" >None</option>
-                                    {groups.map(grp => (
+                                    {groups && groups.map(grp => (
                                         <option key={grp.id} value={grp.id}>{grp.name}</option>
                                     ))}
                                 </select>

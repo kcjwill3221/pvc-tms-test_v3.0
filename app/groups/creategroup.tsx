@@ -26,6 +26,7 @@ export default function CreateGroup(props: CreateGroupProps) {
         if (props.onGroupCreated) {
             props.onGroupCreated();
         }
+        closeModal();
     }
 
     function handleOnChange(params: any) {

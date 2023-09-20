@@ -59,7 +59,7 @@ export default function TasksPage() {
         <>
             <div style={{ position: 'absolute', left: '-9999px' }}>
                 <h1>TASKS</h1>
-                <TaskList tasks={taskList} onTaskEdited={handleTaskEdited} onTaskDeleted={handleTaskDeleted} />
+                <TaskList tasks={taskList} onTaskEdited={handleTaskEdited} onTaskDeleted={handleTaskDeleted} employees={[]} groups={[]} />
             </div>
             <div className="grid grid-cols-12 h-auto min-h-screen font-inter text-5xl text-black">
                 <div className="col-span-8 p-10 bg-peachpuff">

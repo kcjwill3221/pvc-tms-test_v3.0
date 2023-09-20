@@ -5,14 +5,13 @@ import DeleteButton from "./deletebutton";
 import EditButton from "./editbutton";
 import { useEffect, useState } from "react";
 
-interface ITaskProps {
+export interface ITaskProps {
     tasks: ITask[],
     onTaskEdited: () => Promise<void>;
     onTaskDeleted: () => Promise<void>;
+    employees: IEmployee[];
+    groups: any[];
 }
-
-
-
 
 export default function TaskList({ tasks, onTaskEdited, onTaskDeleted }: ITaskProps) {
     let blankEmployees: IEmployee[] = [
@@ -49,9 +48,11 @@ export default function TaskList({ tasks, onTaskEdited, onTaskDeleted }: ITaskPr
             {tasks?.map(task => (
                 <div className="Row" key={task.id}>
                     {task.title}
-                    <EditButton editingTask={task} onTaskEdited={onTaskEdited} employees={employees} groups={[]} />
+                    <EditButton editingTask={task} onTaskEdited={onTaskEdited} employees={employees} groups={[]} taskProp={task} onTaskDeleted={function (): Promise<void> {
+                        throw new Error("Function not implemented.");
+                    }} />
                     <DeleteButton taskProp={task} onTaskDeleted={onTaskDeleted} />
-                    <AssignmentList taskProp={task} employees={employees} groups={[]} />
+                    <AssignmentList taskProp={task} employees={employees} />
                 </div>
             ))}
         </>
