@@ -81,6 +81,13 @@ export default function EmployeesPage() {
                                 Create Employees
                             </button>
 
+                            <Link href="../groups">
+                                <button className="text-xl transition-transform transform
+                             hover:scale-105 duration-300 rounded-[30px] shadow-md py-3 px-5 rounded-xl bg-sandybrown hover:shadow-xl">
+                                    Groups
+                                </button>
+                            </Link>
+
                         </div>
                         <ul className="list-none">
                             {employeeList.map((employee: IEmployee) => (
@@ -129,7 +136,7 @@ export default function EmployeesPage() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 }

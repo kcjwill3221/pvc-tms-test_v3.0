@@ -81,6 +81,13 @@ export default function GroupsPage() {
                                 Create Groups
                             </button>
 
+                            <Link href="../employees">
+                                <button className="text-xl transition-transform transform
+                             hover:scale-105 duration-300 rounded-[30px] shadow-md py-3 px-5 rounded-xl bg-sandybrown hover:shadow-xl">
+                                    Employees
+                                </button>
+                            </Link>
+
                         </div>
                         <ul className="list-none">
                             {groupList.map((group: IGroup) => (
