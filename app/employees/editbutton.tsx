@@ -137,7 +137,7 @@ const EditButton: React.FC<IEmployeeProps> = (props: IEmployeeProps) => {
                                 value={role}
                                 className="w-[400px] h-12 overflow-hidden rounded-lg bg-neutral-100 text-lg p-4"
                             >
-                                <option value="" disabled>Select Status</option>
+                                <option value="" disabled>Select Role</option>
                                 {roleValues.map(p => (
                                     <option key={p.value} value={p.value}>{p.label}</option>
                                 ))}
